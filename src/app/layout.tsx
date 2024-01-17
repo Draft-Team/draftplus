@@ -3,7 +3,7 @@ import '@/styles/globals.css'
 import React from 'react'
 import type { Metadata, Viewport } from 'next'
 
-import { ThemeProvider } from '@/context/theme-provider'
+import { ThemeProvider } from '@/features/theme/theme-provider'
 import { lexend } from '@/libs/fonts'
 import { cn } from '@/libs/utils'
 import { Provider } from '@/provider'
