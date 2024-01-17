@@ -4,6 +4,8 @@ import React from 'react'
 import type { Metadata, Viewport } from 'next'
 
 import { ThemeProvider } from '@/context/theme-provider'
+import { lexend } from '@/libs/fonts'
+import { cn } from '@/libs/utils'
 import { Provider } from '@/provider'
 
 export const metadata: Metadata = {
@@ -19,7 +21,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='pt-BR' suppressHydrationWarning>
-			<body>
+			<body className={cn('font-sans', lexend.variable)}>
 				<Provider providers={[ThemeProvider]}>{children}</Provider>
 			</body>
 		</html>
