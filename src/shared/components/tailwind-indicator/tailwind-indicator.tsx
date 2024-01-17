@@ -1,5 +1,7 @@
+import { env } from '@/environment/env'
+
 export function TailwindIndicator() {
-	if (process.env.NODE_ENV === 'production') return null
+	if (env.NODE_ENV === 'production') return null
 
 	return (
 		<div className='fixed left-1 top-1 z-50 flex h-6 w-6 items-center justify-center rounded-sm bg-yellow-500 p-3 font-mono text-xs text-background'>
