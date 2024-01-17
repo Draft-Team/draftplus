@@ -1,13 +1,9 @@
-import { hello } from '@/actions/hello'
-import { isRight } from '@/libs/either'
 import { cn, placeholderBlurhash } from '@/libs/utils'
 import { BlurImage } from '@/shared/components/blur-image'
 import { ThemeMode } from '@/shared/components/theme-mode'
 import { buttonVariants } from '@/shared/ui/button'
 
 export default async function Page() {
-	const message = await hello({ message: 'from Server Action' })
-
 	return (
 		<>
 			<header className='mb-40 border-b'>
@@ -47,8 +43,6 @@ export default async function Page() {
 						use. Feel free to use it
 					</p>
 				</section>
-
-				{isRight(message) && <p className='text-xl'>{message.value.data}</p>}
 
 				<figure className='overflow-hidden rounded-lg'>
 					<BlurImage
