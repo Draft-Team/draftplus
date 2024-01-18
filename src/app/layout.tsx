@@ -11,7 +11,17 @@ import { TailwindIndicator } from '@/shared/components/tailwind-indicator'
 
 export const metadata: Metadata = {
 	title: 'Draft Plus',
-	description: 'Draft Plus'
+	description: 'Draft Plus',
+	icons: [
+		{
+			url: '/icon-light.jpg',
+			media: '(prefers-color-scheme: light)'
+		},
+		{
+			url: '/icon.jpg',
+			media: '(prefers-color-scheme: dark)'
+		}
+	]
 }
 
 export const viewport: Viewport = {
