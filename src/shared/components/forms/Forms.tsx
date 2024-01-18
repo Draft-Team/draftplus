@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import { LockKeyhole, Mail, UserRound } from 'lucide-react'
 
@@ -11,6 +13,16 @@ interface InputIconProps {
 	icon?: React.ReactNode
 	type?: string
 	className?: string
+}
+
+interface ButtonProps {
+	content: string
+	className?: string
+	icon?: React.ReactNode
+}
+
+interface FormsProps {
+	path?: string
 }
 
 const InputIcon = ({ icon, label, placeholder, className, type }: InputIconProps) => {
@@ -37,19 +49,28 @@ const InputIcon = ({ icon, label, placeholder, className, type }: InputIconProps
 	)
 }
 
-interface FormsProps {
-	path?: string
+const Button = ({ content, className, icon }: ButtonProps) => {
+	return (
+		<button
+			className={cn(
+				'flex h-[36px] w-full items-center justify-center gap-4 rounded-md bg-white font-medium text-[#0F172A] transition-all duration-300 hover:border hover:bg-[#E8EDF3]',
+				className
+			)}>
+			<span className='scale-[140%]'>{icon}</span>
+			{content}
+		</button>
+	)
 }
 
 export const Forms = ({ path }: FormsProps) => {
 	return (
-		<form className='m-auto w-full max-w-[380px] xl:max-w-[443px]' action=''>
-			<h3 className='mb-5 text-center text-[1.75rem] font-bold lg:text-start'>
-				{path === 'login' ? 'Entrar' : 'Cadastre-se'}
-			</h3>
-			<p className='mb-11 text-center text-[#A1A1AACC] lg:text-start'>
-				Encontre a receita perfeita para você
-			</p>
+		<form className='m-auto w-full max-w-[380px] xl:max-w-[443px]'>
+			<div className='mb-11 space-y-5 text-center lg:text-start'>
+				<h3 className='text-[1.75rem] font-bold'>
+					{path === 'login' ? 'Entrar' : 'Cadastre-se'}
+				</h3>
+				<p className='text-[#A1A1AACC]'>Encontre a receita perfeita para você</p>
+			</div>
 
 			<div className='space-y-6'>
 				{path === 'register' && (
@@ -65,22 +86,17 @@ export const Forms = ({ path }: FormsProps) => {
 					icon={<LockKeyhole />}
 				/>
 
-				<button className='h-[36px] w-full rounded-md bg-white font-medium text-[#0F172A] transition-all duration-300 hover:border hover:bg-[#E8EDF3] hover:text-black'>
-					Entrar
-				</button>
+				<Button content='Entrar' />
 
 				<div className='flex w-full items-center justify-center'>
-					<span className='h-0.5 w-full bg-[#E3E3E31A]'></span>
+					<hr className='border-t-0.5 w-full border-[#E3E3E3] opacity-25' />
 					<p className='min-w-[150px] text-center text-xs text-[#E3E3E3]'>
 						ou continue com
 					</p>
-					<span className='h-0.5 w-full bg-[#E3E3E31A]'></span>
+					<hr className='border-t-0.5 w-full border-[#E3E3E3] opacity-25' />
 				</div>
 
-				<button className='flex h-[36px] w-full items-center justify-center gap-4 rounded-md bg-white font-medium text-[#0F172A] transition-all duration-300 hover:border hover:bg-[#E8EDF3]'>
-					<GitHubLogoIcon />
-					Github
-				</button>
+				<Button content='GitHub' icon={<GitHubLogoIcon />} />
 			</div>
 		</form>
 	)
