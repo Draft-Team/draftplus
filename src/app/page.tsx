@@ -1,12 +1,12 @@
-import { cn, placeholderBlurhash } from '@/libs/utils'
-import { BlurImage } from '@/shared/components/blur-image'
+import { cn } from '@/libs/utils'
 import { ThemeMode } from '@/shared/components/theme-mode'
+import { Badge } from '@/shared/ui/badge'
 import { buttonVariants } from '@/shared/ui/button'
 
 export default async function Page() {
 	return (
 		<>
-			<header className='mb-40 border-b'>
+			<header className='mb-20 border-b'>
 				<nav className='container mx-auto flex h-14 items-center justify-between'>
 					<ThemeMode />
 
@@ -33,28 +33,17 @@ export default async function Page() {
 				</nav>
 			</header>
 
-			<main className='container mx-auto flex flex-col items-center justify-center gap-10'>
-				<section className='space-y-2 text-center'>
-					<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl'>
-						Next.js 14 Template
+			<main className='container mx-auto'>
+				<section className='flex flex-col gap-3 md:gap-4'>
+					<Badge className='w-max'>SIMPLES E RAPIDO</Badge>
+					<h1 className='max-w-[540px] text-3xl font-medium leading-9 md:text-4xl lg:text-[40px]'>
+						Encontre a receita perfeita para você e seu momento
 					</h1>
-					<p className='text-gray-500 md:text-xl'>
-						Created by <span className='underline'>Matheus Pergoli</span> for personal
-						use. Feel free to use it
+					<p className='max-w-[540px] text-muted-foreground '>
+						Explore uma coleção diversificada de pratos irresistíveis e descubra sabores
+						feitos sob medida para cada ocasião, do dia a dia a momentos especiais
 					</p>
 				</section>
-
-				<figure className='overflow-hidden rounded-lg'>
-					<BlurImage
-						width={400}
-						height={400}
-						alt='Blurhash'
-						src={'https://avatars.githubusercontent.com/u/14985020?v=4'}
-						placeholder='blur'
-						blurDataURL={placeholderBlurhash}
-						className='w-60 rounded-lg'
-					/>
-				</figure>
 			</main>
 		</>
 	)
