@@ -2,12 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Forms } from '@/shared/components/forms/Forms'
+import { Forms } from '@/shared/components/forms/Forms-zap'
 
-import bgAuth from '../../../../public/background/bg-auth.png'
-import logo from '../../../../public/logo/draft+.svg'
+import bgAuth from '../../../../public/bg-auth.png'
+import logo from '../../../../public/draft+.svg'
 
-const page = () => {
+export default function Page() {
 	return (
 		<div className='flex h-screen items-center justify-center px-4 lg:px-0'>
 			<div className='relative hidden lg:block lg:basis-2/4'>
@@ -33,5 +33,3 @@ const page = () => {
 		</div>
 	)
 }
-
-export default page
