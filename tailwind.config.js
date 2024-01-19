@@ -11,6 +11,9 @@ module.exports = {
 			}
 		},
 		extend: {
+			backgroundImage: {
+				auth: 'url("/bg-auth.png")'
+			},
 			fontFamily: {
 				sans: ['var(--font-lexend)', ...fontFamily.sans]
 			},
