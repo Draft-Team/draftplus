@@ -7,6 +7,7 @@ import { ThemeProvider } from '@/features/theme/theme-provider'
 import { lexend } from '@/libs/fonts'
 import { cn } from '@/libs/utils'
 import { Provider } from '@/provider'
+import { Footer } from '@/shared/components/footer/footer'
 import { TailwindIndicator } from '@/shared/components/tailwind-indicator'
 
 export const metadata: Metadata = {
@@ -32,10 +33,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='pt-BR' suppressHydrationWarning>
-			<body className={cn('font-sans', lexend.variable)}>
+			<body className={cn('flex h-screen flex-col font-sans', lexend.variable)}>
 				<Provider providers={[ThemeProvider]}>
-					{children}
+					<div className='flex-1'>{children}</div>
 					<TailwindIndicator />
+					<Footer />
 				</Provider>
 			</body>
 		</html>
