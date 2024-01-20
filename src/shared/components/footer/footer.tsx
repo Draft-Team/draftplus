@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import { ChevronsUp } from 'lucide-react'
 
@@ -8,6 +11,12 @@ import { Button } from '@/shared/ui/button'
 import { BlurImage } from '../blur-image'
 
 export const Footer = () => {
+	const pathname = usePathname()
+
+	if (pathname === '/login' || pathname === '/register') {
+		return null
+	}
+
 	return (
 		<footer className='container mx-auto'>
 			<div className='flex flex-col justify-between gap-7  sm:flex-row sm:gap-0'>
