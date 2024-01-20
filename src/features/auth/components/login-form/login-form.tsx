@@ -11,7 +11,7 @@ import {
 } from '@/shared/components/forms'
 
 import { LoginFormData } from '../../dtos'
-import { useLoginForm } from '../../hooks/use-login-form'
+import { useLoginForm } from '../../hooks'
 
 export const LoginForm = () => {
 	const { errors, handleSubmit, register } = useLoginForm()

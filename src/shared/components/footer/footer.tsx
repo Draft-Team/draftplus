@@ -12,7 +12,7 @@ export const Footer = () => {
 		<footer className='container mx-auto'>
 			<div className='flex flex-col justify-between gap-7  sm:flex-row sm:gap-0'>
 				<div className='flex flex-col items-center gap-4 sm:items-start'>
-					<picture className='relative h-6 w-20 overflow-hidden rounded-md'>
+					<Link href='/' className='relative h-6 w-20 overflow-hidden rounded-md'>
 						<BlurImage
 							className='h-full w-full'
 							src='/draftplus-logo.svg'
@@ -21,7 +21,7 @@ export const Footer = () => {
 							blurDataURL={placeholderBlurhash}
 							alt='DraftPlus Logo'
 						/>
-					</picture>
+					</Link>
 
 					<p className='text-muted-foreground'>Encontre o prato perfeito para você</p>
 				</div>
