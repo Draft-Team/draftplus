@@ -9,6 +9,16 @@ module.exports = {
 		'next/core-web-vitals',
 		'plugin:@typescript-eslint/recommended'
 	],
+	overrides: [
+		{
+			files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+			extends: [
+				'plugin:testing-library/react',
+				'plugin:jest-dom/recommended',
+				'plugin:vitest/recommended'
+			]
+		}
+	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		project
@@ -32,12 +42,5 @@ module.exports = {
 	rules: {
 		'react/prop-types': 'off'
 	},
-	ignorePatterns: [
-		'**/.*.js',
-		'**/.*.ts',
-		'**/*.config.ts',
-		'**/*.config.js',
-		'node_modules',
-		'.next'
-	]
+	ignorePatterns: ['**/*.config.ts', '**/*.config.js', 'node_modules', '.next']
 }

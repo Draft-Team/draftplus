@@ -27,7 +27,7 @@ describe('RegisterForm', () => {
 		expect(errorMessage).toBeInTheDocument()
 	})
 
-	it('it should show an error for empty password', async () => {
+	it('should show an error for empty password', async () => {
 		const { user } = setup(<RegisterForm />)
 
 		const password = screen.getByPlaceholderText('Senha')
