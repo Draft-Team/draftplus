@@ -35,7 +35,7 @@ export default async function Page() {
 			</header>
 
 			<main className='container mx-auto'>
-				<section className='grid grid-cols-2 items-center'>
+				<section className='grid grid-cols-1 items-center sm:grid-cols-2'>
 					<div className='flex flex-col gap-3 md:gap-4'>
 						<Badge className='w-max'>SIMPLES E RAPIDO</Badge>
 						<h1 className='max-w-[540px] text-3xl font-medium leading-9 md:text-4xl lg:text-[40px]'>
@@ -46,7 +46,7 @@ export default async function Page() {
 							feitos sob medida para cada ocasião, do dia a dia a momentos especiais
 						</p>
 					</div>
-					<div className='w-[700px] '>
+					<div className='hidden w-[700px] sm:block'>
 						<HeroAnimation />
 					</div>
 				</section>

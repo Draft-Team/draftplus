@@ -74,7 +74,7 @@
 
 /* used in hero section */
 .scene {
-	--buff: 3rem;
+	--buff: 4rem;
 	height: 100%;
 	width: 100%;
 	mask: linear-gradient(
