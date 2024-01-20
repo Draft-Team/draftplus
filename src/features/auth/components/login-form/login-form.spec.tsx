@@ -27,7 +27,7 @@ describe('LoginForm', () => {
 		expect(errorMessage).toBeInTheDocument()
 	})
 
-	it('it should show an error for empty password', async () => {
+	it('should show an error for empty password', async () => {
 		const { user } = setup(<LoginForm />)
 
 		const email = screen.getByPlaceholderText('Email')
