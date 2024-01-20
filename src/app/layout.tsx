@@ -7,7 +7,7 @@ import { ThemeProvider } from '@/features/theme/theme-provider'
 import { lexend } from '@/libs/fonts'
 import { cn } from '@/libs/utils'
 import { Provider } from '@/provider'
-import { Footer } from '@/shared/components/footer/footer'
+import { Footer } from '@/shared/components/footer'
 import { TailwindIndicator } from '@/shared/components/tailwind-indicator'
 
 export const metadata: Metadata = {
