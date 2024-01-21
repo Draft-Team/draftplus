@@ -30,6 +30,22 @@ describe('RegisterForm', () => {
 	it('should show an error for empty password', async () => {
 		const { user } = setup(<RegisterForm />)
 
+		const email = screen.getByPlaceholderText('Email')
+		const name = screen.getByPlaceholderText('Nome')
+		const submit = screen.getByRole('button', { name: 'Cadastrar' })
+
+		await user.type(name, 'alice')
+		await user.type(email, 'zap@dsa.com')
+		await user.click(submit)
+
+		const errorMessage = await screen.findByText('Esse campo precisa ser preenchido')
+
+		expect(errorMessage).toBeInTheDocument()
+	})
+
+	it('should show an error for incorrect password validate', async () => {
+		const { user } = setup(<RegisterForm />)
+
 		const password = screen.getByPlaceholderText('Senha')
 		const submit = screen.getByRole('button', { name: 'Cadastrar' })
 
