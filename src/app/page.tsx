@@ -1,8 +1,11 @@
-import { cn } from '@/libs/utils'
+import { UtensilsCrossed } from 'lucide-react'
+
+import { cn, placeholderBlurhash } from '@/libs/utils'
+import { BlurImage } from '@/shared/components/blur-image'
 import { HeroAnimation } from '@/shared/components/hero-animation/hero-animation'
 import { ThemeMode } from '@/shared/components/theme-mode'
 import { Badge } from '@/shared/ui/badge'
-import { buttonVariants } from '@/shared/ui/button'
+import { Button, buttonVariants } from '@/shared/ui/button'
 
 export default async function Page() {
 	return (
@@ -51,6 +54,34 @@ export default async function Page() {
 					</div>
 				</section>
 			</main>
+
+			<section className='mt-20 border bg-[#141414] '>
+				<div className='container mx-auto grid grid-cols-2 items-center '>
+					<div className='max-w-[463px]'>
+						<h2 className='text-3xl font-semibold'>Descubra nova receitas</h2>
+						<p className='mb-8 mt-8 font-medium text-muted-foreground'>
+							Explorar novos sabores na cozinha é como desvendar um mundo de
+							possibilidades onde a criatividade se torna o tempero principal para
+							transformar simples ingredientes em verdadeiras obras de arte culinária
+						</p>
+
+						<Button>
+							<UtensilsCrossed />
+							Ver todas as receitas
+						</Button>
+					</div>
+					<div className='relative h-[348px] max-w-[736px] overflow-hidden rounded-md'>
+						<BlurImage
+							className='h-full w-full'
+							src='/food-cta.jpg'
+							fill
+							placeholder='blur'
+							blurDataURL={placeholderBlurhash}
+							alt='DraftPlus Logo'
+						/>
+					</div>
+				</div>
+			</section>
 		</>
 	)
 }

@@ -18,7 +18,7 @@ export const Footer = () => {
 	}
 
 	return (
-		<footer className='container mx-auto'>
+		<footer className='container mx-auto mt-28'>
 			<div className='flex flex-col justify-between gap-7  sm:flex-row sm:gap-0'>
 				<div className='flex flex-col items-center gap-4 sm:items-start'>
 					<Link href='/' className='relative h-6 w-20 overflow-hidden rounded-md'>
