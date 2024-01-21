@@ -11,13 +11,14 @@ import {
 } from '@/shared/components/forms'
 
 import { LoginFormData } from '../../dtos'
-import { useLoginForm } from '../../hooks'
+import { useLogin, useLoginForm } from '../../hooks'
 
 export const LoginForm = () => {
+	const { login } = useLogin()
 	const { errors, handleSubmit, register } = useLoginForm()
 
 	const onSubmit = async (data: LoginFormData) => {
-		console.log(data)
+		await login(data)
 	}
 
 	return (

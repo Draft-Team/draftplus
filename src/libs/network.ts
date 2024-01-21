@@ -1,5 +1,6 @@
 import axios, { isAxiosError, type InternalAxiosRequestConfig } from 'axios'
 
+import { env } from '@/environment/env'
 import { Either, left, right } from '@/libs/either'
 
 interface HttpResultSuccess<T> {
@@ -42,7 +43,7 @@ type HttpClient = (props?: { baseURL?: string }) => {
 
 export const createHttpClient: HttpClient = (props) => {
 	const client = axios.create({
-		baseURL: props?.baseURL || ''
+		baseURL: props?.baseURL || env.BACKEND_URL
 	})
 
 	const formatError = <T>({ error }: { error: unknown }): HttpResult<T> => {
