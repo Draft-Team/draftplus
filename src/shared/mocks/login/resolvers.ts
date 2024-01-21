@@ -1,10 +1,17 @@
 import { HttpResponse, ResponseResolver } from 'msw'
 
-export const loginResolver: ResponseResolver = () => {
+interface LoginBody {
+	email: string
+	password: string
+}
+
+export const loginResolver: ResponseResolver = async ({ request }) => {
+	const body = (await request.json()) as LoginBody
 	return HttpResponse.json({
 		user: {
 			id: 'abc-123',
-			email: 'zap@email.com'
+			email: body.email,
+			password: body.password
 		}
 	})
 }

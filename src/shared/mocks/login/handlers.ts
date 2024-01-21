@@ -1,5 +1,9 @@
 import { http } from 'msw'
 
+import { env } from '@/environment/env'
+
 import { loginResolver } from './resolvers'
 
-export const loginHandlers = [http.post('http://localhost/login', loginResolver)]
+const baseURL = env.BACKEND_URL
+
+export const loginHandlers = [http.post(`${baseURL}/login`, loginResolver)]

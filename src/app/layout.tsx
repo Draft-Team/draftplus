@@ -3,12 +3,15 @@ import '@/styles/globals.css'
 import React from 'react'
 import type { Metadata, Viewport } from 'next'
 
+import { env } from '@/environment/env'
 import { ThemeProvider } from '@/features/theme/theme-provider'
 import { lexend } from '@/libs/fonts'
 import { cn } from '@/libs/utils'
 import { Provider } from '@/provider'
 import { Footer } from '@/shared/components/footer'
 import { TailwindIndicator } from '@/shared/components/tailwind-indicator'
+import { server } from '@/shared/mocks/setup-handler'
+import { Toaster } from '@/shared/ui/sonner'
 
 export const metadata: Metadata = {
 	title: 'Draft Plus',
@@ -30,6 +33,13 @@ export const viewport: Viewport = {
 	width: 'device-width'
 }
 
+function enableMock() {
+	if (env.NODE_ENV === 'development' && typeof window === 'undefined') {
+		server.listen()
+	}
+}
+enableMock()
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='pt-BR' suppressHydrationWarning>
@@ -38,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					<div className='flex-1'>{children}</div>
 					<TailwindIndicator />
 					<Footer />
+					<Toaster />
 				</Provider>
 			</body>
 		</html>
