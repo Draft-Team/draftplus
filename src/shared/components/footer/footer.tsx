@@ -19,11 +19,19 @@ export const Footer = () => {
 
 	return (
 		<footer className='container mx-auto mt-28'>
-			<div className='flex flex-col justify-between gap-7  sm:flex-row sm:gap-0'>
+			<div className='flex flex-col justify-between gap-7 sm:flex-row sm:gap-0'>
 				<div className='flex flex-col items-center gap-4 sm:items-start'>
 					<Link href='/' className='relative h-6 w-20 overflow-hidden rounded-md'>
 						<BlurImage
-							className='h-full w-full'
+							className='block h-full w-full dark:hidden'
+							src='/draftplus-logo-dark.svg'
+							fill
+							placeholder='blur'
+							blurDataURL={placeholderBlurhash}
+							alt='DraftPlus Logo'
+						/>
+						<BlurImage
+							className='hidden h-full w-full dark:block'
 							src='/draftplus-logo.svg'
 							fill
 							placeholder='blur'
