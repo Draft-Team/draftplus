@@ -71,3 +71,22 @@
 		@apply text-pretty;
 	}
 }
+
+/* used in hero section */
+.scene {
+	--buff: 4rem;
+	height: 100%;
+	width: 100%;
+	mask: linear-gradient(
+			transparent,
+			white var(--buff) calc(100% - var(--buff)),
+			transparent
+		),
+		linear-gradient(
+			90deg,
+			transparent,
+			white var(--buff) calc(100% - var(--buff)),
+			transparent
+		);
+	mask-composite: intersect;
+}
