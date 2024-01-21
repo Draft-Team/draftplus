@@ -72,6 +72,11 @@
 	}
 }
 
+::selection {
+	background: #c30a11;
+	color: #fff;
+}
+
 /* used in hero section */
 .scene {
 	--buff: 4rem;

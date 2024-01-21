@@ -18,7 +18,7 @@ export const Footer = () => {
 	}
 
 	return (
-		<footer className='container mx-auto'>
+		<footer className='container mx-auto mt-28'>
 			<div className='flex flex-col justify-between gap-7  sm:flex-row sm:gap-0'>
 				<div className='flex flex-col items-center gap-4 sm:items-start'>
 					<Link href='/' className='relative h-6 w-20 overflow-hidden rounded-md'>
@@ -65,11 +65,13 @@ export const Footer = () => {
 			</div>
 			<hr className='mb-6 mt-16 h-1 w-full text-muted-foreground' />
 			<div className='mb-4 flex flex-col-reverse items-center sm:flex-row sm:justify-between'>
-				<span className='text-center text-white/80 sm:text-start'>
+				<span className='text-center dark:text-white/80 sm:text-start'>
 					© 2024 Draftplus Inc. All rights reserved.
 				</span>
-				<Button className='w-min' variant={'link'}>
-					Voltar para o topo <ChevronsUp className='text-white' />
+				<Button asChild className='w-min' variant={'link'}>
+					<Link href={'/receitas'}>
+						Voltar para o topo <ChevronsUp className='text-white' />
+					</Link>
 				</Button>
 			</div>
 		</footer>
