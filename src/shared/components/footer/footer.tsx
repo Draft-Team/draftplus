@@ -65,11 +65,13 @@ export const Footer = () => {
 			</div>
 			<hr className='mb-6 mt-16 h-1 w-full text-muted-foreground' />
 			<div className='mb-4 flex flex-col-reverse items-center sm:flex-row sm:justify-between'>
-				<span className='text-center text-white/80 sm:text-start'>
+				<span className='text-center dark:text-white/80 sm:text-start'>
 					© 2024 Draftplus Inc. All rights reserved.
 				</span>
-				<Button className='w-min' variant={'link'}>
-					Voltar para o topo <ChevronsUp className='text-white' />
+				<Button asChild className='w-min' variant={'link'}>
+					<Link href={'/receitas'}>
+						Voltar para o topo <ChevronsUp className='text-white' />
+					</Link>
 				</Button>
 			</div>
 		</footer>
