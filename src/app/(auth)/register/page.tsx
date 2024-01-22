@@ -30,7 +30,7 @@ export default function Page() {
 			</Link>
 			<Link
 				className='absolute right-5 top-5 flex gap-4 font-medium text-primary'
-				href='/register'>
+				href='/login'>
 				Entrar
 			</Link>
 			<section className='mx-auto flex h-screen w-full max-w-[444px] items-center justify-center px-2 lg:px-0'>

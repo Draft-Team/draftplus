@@ -7,6 +7,7 @@ import { ChevronsUp } from 'lucide-react'
 
 import { Button } from '@/shared/ui/button'
 
+
 import { DraftLogo } from '../home/draft-logo'
 
 export const Footer = () => {
@@ -55,6 +56,7 @@ export const Footer = () => {
 		<footer className='container mx-auto mt-28'>
 			<div className='flex flex-col justify-between gap-7 sm:flex-row sm:gap-0'>
 				<div className='flex flex-col items-center gap-4 sm:items-start'>
+
 					<DraftLogo />
 					<p className='text-muted-foreground'>Encontre o prato perfeito para você</p>
 				</div>
