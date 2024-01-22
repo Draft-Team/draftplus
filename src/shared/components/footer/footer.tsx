@@ -5,10 +5,9 @@ import { usePathname } from 'next/navigation'
 
 import { ChevronsUp } from 'lucide-react'
 
-import { placeholderBlurhash } from '@/libs/utils'
 import { Button } from '@/shared/ui/button'
 
-import { BlurImage } from '../blur-image'
+import { DraftLogo } from '../home/draft-logo'
 
 export const Footer = () => {
 	const pathname = usePathname()
@@ -17,58 +16,64 @@ export const Footer = () => {
 		return null
 	}
 
+	function backToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
+
+	const footerSections = {
+		sections: [
+			{
+				title: 'LINKS',
+				items: [
+					{
+						title: 'Receitas',
+						url: '/receitas'
+					}
+				]
+			},
+			{
+				title: 'LEGAL',
+				items: [
+					{
+						title: 'Termos de uso',
+						url: '/termos-de-uso'
+					},
+					{
+						title: 'Política de privacidade',
+						url: '/politica-de-privacidade'
+					},
+					{
+						title: 'Política de Cookies',
+						url: '/politica-de-cookies'
+					}
+				]
+			}
+		]
+	}
+
 	return (
 		<footer className='container mx-auto mt-28'>
 			<div className='flex flex-col justify-between gap-7 sm:flex-row sm:gap-0'>
 				<div className='flex flex-col items-center gap-4 sm:items-start'>
-					<Link href='/' className='relative h-6 w-20 overflow-hidden rounded-md'>
-						<BlurImage
-							className='block h-full w-full dark:hidden'
-							src='/draftplus-logo-dark.svg'
-							fill
-							placeholder='blur'
-							blurDataURL={placeholderBlurhash}
-							alt='DraftPlus Logo'
-						/>
-						<BlurImage
-							className='hidden h-full w-full dark:block'
-							src='/draftplus-logo.svg'
-							fill
-							placeholder='blur'
-							blurDataURL={placeholderBlurhash}
-							alt='DraftPlus Logo'
-						/>
-					</Link>
-
+					<DraftLogo />
 					<p className='text-muted-foreground'>Encontre o prato perfeito para você</p>
 				</div>
 				<nav className='flex flex-col items-center gap-16 sm:flex-row sm:items-start'>
-					<div className='flex flex-col items-center gap-4 sm:items-start'>
-						<span className='font-semibold'>LINKS</span>
-						<Link
-							className='text-muted-foreground hover:text-white/70'
-							href={'/receitas'}>
-							Receitas
-						</Link>
-					</div>
-					<div className='flex flex-col items-center gap-4 sm:items-start'>
-						<span className='font-semibold'>LEGAL</span>
-						<Link
-							className='text-muted-foreground hover:text-white/70'
-							href={'/receitas'}>
-							Termos de uso
-						</Link>
-						<Link
-							className='text-muted-foreground hover:text-white/70'
-							href={'/receitas'}>
-							Politica de privacidade
-						</Link>
-						<Link
-							className='text-muted-foreground hover:text-white/70'
-							href={'/receitas'}>
-							Politica de Cookies
-						</Link>
-					</div>
+					{footerSections.sections.map((section) => (
+						<div
+							key={section.title}
+							className='flex flex-col items-center gap-4 sm:items-start'>
+							<span className='font-semibold'>{section.title}</span>
+							{section.items.map((item) => (
+								<Link
+									key={item.title}
+									className='text-muted-foreground hover:text-white/70'
+									href={item.url}>
+									{item.title}
+								</Link>
+							))}
+						</div>
+					))}
 				</nav>
 			</div>
 			<hr className='mb-6 mt-16 h-1 w-full text-muted-foreground' />
@@ -76,10 +81,8 @@ export const Footer = () => {
 				<span className='text-center dark:text-white/80 sm:text-start'>
 					© 2024 Draftplus Inc. All rights reserved.
 				</span>
-				<Button asChild className='w-min' variant={'link'}>
-					<Link href={'/receitas'}>
-						Voltar para o topo <ChevronsUp className='text-white' />
-					</Link>
+				<Button onClick={backToTop} className='w-min' variant={'link'}>
+					Voltar para o topo <ChevronsUp className='text-white' />
 				</Button>
 			</div>
 		</footer>
