@@ -7,8 +7,8 @@ import { ChevronsUp } from 'lucide-react'
 
 import { Button } from '@/shared/ui/button'
 
-
 import { DraftLogo } from '../home/draft-logo'
+import { ThemeMode } from '../theme-mode'
 
 export const Footer = () => {
 	const pathname = usePathname()
@@ -56,7 +56,6 @@ export const Footer = () => {
 		<footer className='container mx-auto mt-28'>
 			<div className='flex flex-col justify-between gap-7 sm:flex-row sm:gap-0'>
 				<div className='flex flex-col items-center gap-4 sm:items-start'>
-
 					<DraftLogo />
 					<p className='text-muted-foreground'>Encontre o prato perfeito para você</p>
 				</div>
@@ -83,9 +82,12 @@ export const Footer = () => {
 				<span className='text-center dark:text-white/80 sm:text-start'>
 					© 2024 Draftplus Inc. All rights reserved.
 				</span>
-				<Button onClick={backToTop} className='w-min' variant={'link'}>
-					Voltar para o topo <ChevronsUp className='text-white' />
-				</Button>
+				<div className='flex gap-2'>
+					<Button onClick={backToTop} className='w-min' variant={'link'}>
+						Voltar para o topo <ChevronsUp className='text-white' />
+					</Button>
+					<ThemeMode />
+				</div>
 			</div>
 		</footer>
 	)
