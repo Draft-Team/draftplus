@@ -5,10 +5,9 @@ import { usePathname } from 'next/navigation'
 
 import { ChevronsUp } from 'lucide-react'
 
-import { placeholderBlurhash } from '@/libs/utils'
 import { Button } from '@/shared/ui/button'
 
-import { BlurImage } from '../blur-image'
+import { Logo } from '../logo/Logo'
 
 export const Footer = () => {
 	const pathname = usePathname()
@@ -21,24 +20,7 @@ export const Footer = () => {
 		<footer className='container mx-auto mt-28'>
 			<div className='flex flex-col justify-between gap-7 sm:flex-row sm:gap-0'>
 				<div className='flex flex-col items-center gap-4 sm:items-start'>
-					<Link href='/' className='relative h-6 w-20 overflow-hidden rounded-md'>
-						<BlurImage
-							className='block h-full w-full dark:hidden'
-							src='/draftplus-logo-dark.svg'
-							fill
-							placeholder='blur'
-							blurDataURL={placeholderBlurhash}
-							alt='DraftPlus Logo'
-						/>
-						<BlurImage
-							className='hidden h-full w-full dark:block'
-							src='/draftplus-logo.svg'
-							fill
-							placeholder='blur'
-							blurDataURL={placeholderBlurhash}
-							alt='DraftPlus Logo'
-						/>
-					</Link>
+					<Logo />
 
 					<p className='text-muted-foreground'>Encontre o prato perfeito para você</p>
 				</div>
