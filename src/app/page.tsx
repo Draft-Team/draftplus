@@ -2,9 +2,8 @@ import { UtensilsCrossed } from 'lucide-react'
 
 import { placeholderBlurhash } from '@/libs/utils'
 import { BlurImage } from '@/shared/components/blur-image'
-import { Header } from '@/shared/components/header/Header'
+import { Header } from '@/shared/components/header/header'
 import { HeroAnimation } from '@/shared/components/home'
-import { ThemeMode } from '@/shared/components/theme-mode'
 import { Badge } from '@/shared/ui/badge'
 import { Button } from '@/shared/ui/button'
 

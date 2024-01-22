@@ -4,7 +4,7 @@ import { Heart } from 'lucide-react'
 
 import { ActiveLink } from '../active-link'
 import { DraftLogo } from '../home/draft-logo'
-import { ButtonLogin } from './ButtonLogin'
+import { ButtonLogin } from './button-login'
 
 const dataNav = [
 	{
