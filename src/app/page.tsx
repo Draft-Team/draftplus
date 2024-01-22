@@ -2,7 +2,7 @@ import { UtensilsCrossed } from 'lucide-react'
 
 import { cn, placeholderBlurhash } from '@/libs/utils'
 import { BlurImage } from '@/shared/components/blur-image'
-import { HeroAnimation } from '@/shared/components/hero-animation/hero-animation'
+import { HeroAnimation } from '@/shared/components/home'
 import { ThemeMode } from '@/shared/components/theme-mode'
 import { Badge } from '@/shared/ui/badge'
 import { Button, buttonVariants } from '@/shared/ui/button'
