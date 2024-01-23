@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 import { ChevronLeft } from 'lucide-react'
 
-import { RegisterForm } from '@/features/auth/components/register-form'
-import { placeholderBlurhash } from '@/libs/utils'
+import { RegisterForm } from '@/features/register/components'
 import { BlurImage } from '@/shared/components/blur-image'
+import { placeholderBlurhash } from '@/shared/libs/utils'
 
 export default function Page() {
 	return (

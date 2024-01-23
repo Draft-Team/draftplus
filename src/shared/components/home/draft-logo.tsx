@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { placeholderBlurhash } from '@/libs/utils'
+import { placeholderBlurhash } from '@/shared/libs/utils'
 
 import { BlurImage } from '../blur-image'
 
