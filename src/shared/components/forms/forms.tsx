@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { cn } from '@/shared/libs/utils'
+import { cn } from '@/libs/utils'
 import { Button, ButtonProps, buttonVariants } from '@/shared/ui/button'
 import { Input, InputProps } from '@/shared/ui/input'
 import { Label } from '@/shared/ui/label'

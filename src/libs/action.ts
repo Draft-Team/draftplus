@@ -1,4 +1,4 @@
-import { Either, left } from '@/shared/libs/either'
+import { Either, left } from '@/libs/either'
 
 interface ActionResultSuccess<S> {
 	message: string

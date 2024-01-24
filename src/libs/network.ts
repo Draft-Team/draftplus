@@ -1,7 +1,7 @@
 import axios, { isAxiosError, type InternalAxiosRequestConfig } from 'axios'
 
-import { env } from '@/shared/environment'
-import { Either, left, right } from '@/shared/libs/either'
+import { env } from '@/environment'
+import { Either, left, right } from '@/libs/either'
 
 interface HttpResultSuccess<T> {
 	data: T

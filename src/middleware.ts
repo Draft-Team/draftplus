@@ -1,5 +1,5 @@
-import { loggingMiddleware } from '@/features/logging/logging-middleware'
-import { createMiddleware } from '@/shared/libs/middleware'
+import { createMiddleware } from '@/libs/middleware'
+import { loggingMiddleware } from '@/middlewares/logging'
 
 export default createMiddleware({
 	'*': [loggingMiddleware]

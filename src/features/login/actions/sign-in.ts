@@ -1,8 +1,8 @@
 'use server'
 
-import { createAction } from '@/shared/libs/action'
-import { isLeft, left, right } from '@/shared/libs/either'
-import { createHttpClient } from '@/shared/libs/network'
+import { createAction } from '@/libs/action'
+import { isLeft, left, right } from '@/libs/either'
+import { createHttpClient } from '@/libs/network'
 
 interface SignInParams {
 	email: string
