@@ -8,10 +8,10 @@ import { lexend } from '@/libs/fonts'
 import { cn } from '@/libs/utils'
 import { Provider } from '@/providers/main-provider'
 import { ThemeProvider } from '@/providers/theme'
-import { Footer } from '@/shared/components/footer'
 import { TailwindIndicator } from '@/shared/components/tailwind-indicator'
 import { server } from '@/shared/mocks/setup-handler'
 import { Toaster } from '@/shared/ui/sonner'
+import { Footer } from '@/widgets/footer'
 
 export const metadata: Metadata = {
 	title: 'Draft Plus',

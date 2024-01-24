@@ -5,10 +5,9 @@ import { usePathname } from 'next/navigation'
 
 import { ChevronsUp } from 'lucide-react'
 
+import { DraftLogo } from '@/shared/components/draft-logo'
+import { ThemeMode } from '@/shared/components/theme-mode'
 import { Button } from '@/shared/ui/button'
-
-import { DraftLogo } from '../home/draft-logo'
-import { ThemeMode } from '../theme-mode'
 
 export const Footer = () => {
 	const pathname = usePathname()
