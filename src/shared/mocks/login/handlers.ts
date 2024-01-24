@@ -1,6 +1,6 @@
 import { http } from 'msw'
 
-import { env } from '@/environment/env'
+import { env } from '@/environment'
 
 import { loginResolver } from './resolvers'
 

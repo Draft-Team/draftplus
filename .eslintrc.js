@@ -42,5 +42,12 @@ module.exports = {
 	rules: {
 		'react/prop-types': 'off'
 	},
-	ignorePatterns: ['**/*.config.ts', '**/*.config.js', 'node_modules', '.next']
+	ignorePatterns: [
+		'.next',
+		'**/.*.js',
+		'**/.*.ts',
+		'node_modules',
+		'**/*.config.ts',
+		'**/*.config.js'
+	]
 }

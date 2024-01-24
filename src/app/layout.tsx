@@ -3,15 +3,15 @@ import '@/styles/globals.css'
 import React from 'react'
 import type { Metadata, Viewport } from 'next'
 
-import { env } from '@/environment/env'
-import { ThemeProvider } from '@/features/theme/theme-provider'
+import { env } from '@/environment'
 import { lexend } from '@/libs/fonts'
 import { cn } from '@/libs/utils'
-import { Provider } from '@/provider'
-import { Footer } from '@/shared/components/footer'
+import { Provider } from '@/providers/main-provider'
+import { ThemeProvider } from '@/providers/theme'
 import { TailwindIndicator } from '@/shared/components/tailwind-indicator'
 import { server } from '@/shared/mocks/setup-handler'
 import { Toaster } from '@/shared/ui/sonner'
+import { Footer } from '@/widgets/footer'
 
 export const metadata: Metadata = {
 	title: 'Draft Plus',

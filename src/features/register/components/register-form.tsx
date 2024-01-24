@@ -10,8 +10,8 @@ import {
 	FormLabel
 } from '@/shared/components/forms'
 
-import { RegisterFormData } from '../../dtos'
-import { useRegisterForm } from '../../hooks'
+import { RegisterFormData } from '../dtos'
+import { useRegisterForm } from '../hooks'
 
 export const RegisterForm = () => {
 	const { errors, handleSubmit, register } = useRegisterForm()

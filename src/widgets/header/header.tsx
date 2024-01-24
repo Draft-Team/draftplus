@@ -2,8 +2,9 @@ import React from 'react'
 
 import { Heart } from 'lucide-react'
 
-import { ActiveLink } from '../active-link'
-import { DraftLogo } from '../home/draft-logo'
+import { ActiveLink } from '@/shared/components/active-link'
+import { DraftLogo } from '@/shared/components/draft-logo'
+
 import { ButtonLogin } from './button-login'
 
 const dataNav = [

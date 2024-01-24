@@ -10,8 +10,8 @@ import {
 	FormLabel
 } from '@/shared/components/forms'
 
-import { LoginFormData } from '../../dtos'
-import { useLogin, useLoginForm } from '../../hooks'
+import { LoginFormData } from '../dtos'
+import { useLogin, useLoginForm } from '../hooks'
 
 export const LoginForm = () => {
 	const { login } = useLogin()

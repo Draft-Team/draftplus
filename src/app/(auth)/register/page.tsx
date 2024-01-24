@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { ChevronLeft } from 'lucide-react'
 
-import { RegisterForm } from '@/features/auth/components/register-form'
+import { RegisterForm } from '@/features/register/components'
 import { placeholderBlurhash } from '@/libs/utils'
 import { BlurImage } from '@/shared/components/blur-image'
 
