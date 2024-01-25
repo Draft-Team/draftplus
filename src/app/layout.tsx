@@ -12,6 +12,7 @@ import { TailwindIndicator } from '@/shared/components/tailwind-indicator'
 import { server } from '@/shared/mocks/setup-handler'
 import { Toaster } from '@/shared/ui/sonner'
 import { Footer } from '@/widgets/footer'
+import { Header } from '@/widgets/header'
 
 export const metadata: Metadata = {
 	title: 'Draft Plus',
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang='pt-BR' suppressHydrationWarning>
 			<body className={cn('flex h-screen flex-col font-sans', lexend.variable)}>
 				<Provider providers={[ThemeProvider]}>
+					<Header />
 					<div className='flex-1'>{children}</div>
 					<TailwindIndicator />
 					<Footer />
