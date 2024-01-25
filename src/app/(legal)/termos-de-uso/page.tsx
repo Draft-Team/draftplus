@@ -1,5 +1,3 @@
-import { LegalType } from '@/types/legal-types'
-
 const consentData: LegalType = {
 	'1': {
 		titulo: 'Consentimento e Aceitação',

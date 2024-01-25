@@ -7,4 +7,4 @@ interface ItemComItens extends Item {
 	itens: Record<string, Item>
 }
 
-export type LegalType = Record<string, Item | ItemComItens>
+type LegalType = Record<string, Item | ItemComItens>

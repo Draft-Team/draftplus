@@ -1,5 +1,3 @@
-import { LegalType } from '@/types/legal-types'
-
 const privacyData: LegalType = {
 	'1': {
 		titulo: 'Informações Coletadas',

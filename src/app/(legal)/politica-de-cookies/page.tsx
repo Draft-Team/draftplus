@@ -1,5 +1,3 @@
-import { LegalType } from '@/types/legal-types'
-
 const jsonData: LegalType = {
 	'1': {
 		titulo: 'O que são Cookies?',
