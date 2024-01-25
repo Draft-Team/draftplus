@@ -4,14 +4,12 @@ import { placeholderBlurhash } from '@/libs/utils'
 import { BlurImage } from '@/shared/components/blur-image'
 import { Badge } from '@/shared/ui/badge'
 import { Button } from '@/shared/ui/button'
-import { Header } from '@/widgets/header'
 import { HeroAnimation } from '@/widgets/hero-animation'
 
 export default async function Page() {
 	return (
 		<>
 			<main className='container mx-auto'>
-				<Header />
 				<section className='grid grid-cols-1 items-center md:grid-cols-2'>
 					<div className='flex flex-col gap-3 md:gap-4'>
 						<Badge className='w-max'>SIMPLES E RAPIDO</Badge>

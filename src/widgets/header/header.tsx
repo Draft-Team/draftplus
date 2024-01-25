@@ -1,4 +1,7 @@
+'use client'
+
 import React from 'react'
+import { usePathname } from 'next/navigation'
 
 import { Heart } from 'lucide-react'
 
@@ -31,19 +34,26 @@ const dataNav = [
 ]
 
 export const Header = () => {
+	const pathname = usePathname()
+
+	if (pathname === '/login' || pathname === '/register') {
+		return null
+	}
 	return (
-		<header className='flex items-center justify-between pb-20 pt-11'>
-			<DraftLogo />
-			<nav className='w-fit'>
-				<ul className='flex w-full items-center gap-4'>
-					{dataNav.map(({ id, title, href }) => (
-						<li key={id}>
-							<ActiveLink href={href}>{title}</ActiveLink>
-						</li>
-					))}
-					<ButtonLogin href='/login' user />
-				</ul>
-			</nav>
+		<header className='container mx-auto'>
+			<div className='flex items-center justify-between pb-20 pt-11'>
+				<DraftLogo />
+				<nav className='w-fit'>
+					<ul className='flex w-full items-center gap-4'>
+						{dataNav.map(({ id, title, href }) => (
+							<li key={id}>
+								<ActiveLink href={href}>{title}</ActiveLink>
+							</li>
+						))}
+						<ButtonLogin href='/login' user />
+					</ul>
+				</nav>
+			</div>
 		</header>
 	)
 }
