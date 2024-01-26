@@ -4,6 +4,7 @@ import { placeholderBlurhash } from '@/libs/utils'
 import { BlurImage } from '@/shared/components/blur-image'
 import { Badge } from '@/shared/ui/badge'
 import { Button } from '@/shared/ui/button'
+import { Bento } from '@/widgets/bento'
 import { HeroAnimation } from '@/widgets/hero-animation'
 
 export default async function Page() {
@@ -26,6 +27,8 @@ export default async function Page() {
 					</div>
 				</section>
 			</main>
+
+			<Bento />
 
 			<section className='mt-20 border-y bg-[url("/food-cta.jpg")] bg-cover bg-no-repeat bg-blend-overlay dark:bg-[#333]  md:bg-none dark:md:bg-[#141414]'>
 				<div className='container mx-auto grid grid-cols-1 items-center md:grid-cols-2 md:pr-0'>
