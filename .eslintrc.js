@@ -11,12 +11,16 @@ module.exports = {
 	],
 	overrides: [
 		{
-			files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+			files: ['**/?(*.)+(spec).[jt]s?(x)'],
 			extends: [
-				'plugin:testing-library/react',
 				'plugin:jest-dom/recommended',
-				'plugin:vitest/recommended'
+				'plugin:vitest/recommended',
+				'plugin:testing-library/react'
 			]
+		},
+		{
+			files: ['**/?(*.)+(test).[jt]s?(x)'],
+			extends: ['plugin:chai-friendly/recommended', 'plugin:cypress/recommended']
 		}
 	],
 	parser: '@typescript-eslint/parser',
