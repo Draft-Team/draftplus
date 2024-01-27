@@ -1,6 +1,6 @@
-import { Clock3, LucideHeart, UserRound } from 'lucide-react'
+import { Clock3, HelpCircle, LucideHeart, UserRound } from 'lucide-react'
 
-import { isRight } from '@/libs/either'
+import { isLeft, isRight } from '@/libs/either'
 import { placeholderBlurhash } from '@/libs/utils'
 import { BlurImage } from '@/shared/components/blur-image'
 import * as RecipeCard from '@/shared/components/recipe-card'
@@ -12,6 +12,22 @@ export const PopuparRecipes = async () => {
 
 	return (
 		<div className='grid grid-cols-1 place-items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7'>
+			{isLeft(recipes) && (
+				<>
+					<div className='flex flex-col items-center gap-4'>
+						<HelpCircle size={44} className='text-primary' />
+						Houve um erro. Parece que não temos receitas.
+					</div>
+					<div className='flex flex-col items-center gap-4'>
+						<HelpCircle size={44} className='text-primary' />
+						Houve um erro. Parece que não temos receitas.
+					</div>
+					<div className='flex flex-col items-center gap-4'>
+						<HelpCircle size={44} className='text-primary' />
+						Houve um erro. Parece que não temos receitas.
+					</div>
+				</>
+			)}
 			{isRight(recipes) &&
 				recipes.value.data.recipes.map((recipe) => (
 					<RecipeCard.Root key={recipe.title}>

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { UtensilsCrossed } from 'lucide-react'
 
 import { PopuparRecipes } from '@/features/popular-recipes/components'
@@ -36,6 +38,12 @@ export default async function Page() {
 					</p>
 				</div>
 				<PopuparRecipes />
+
+				<Button
+					asChild
+					className='ml-auto mt-4 flex w-full items-center justify-center md:w-min'>
+					<Link href={'/'}>Veja mais...</Link>
+				</Button>
 			</section>
 
 			<section className='container mx-auto mt-20'>
