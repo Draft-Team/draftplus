@@ -11,14 +11,14 @@ export const PopuparRecipes = async () => {
 	const recipes = await getRecipes()
 
 	return (
-		<div className='grid grid-cols-3 gap-4'>
+		<div className='grid grid-cols-1 place-items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7'>
 			{isRight(recipes) &&
 				recipes.value.data.recipes.map((recipe) => (
 					<RecipeCard.Root key={recipe.title}>
 						<RecipeCard.Banner className='relative'>
 							<figure className='relative h-[250px] overflow-hidden rounded-t-md border-b lg:max-w-[586px]'>
 								<BlurImage
-									className='h-full w-full object-fill'
+									className='h-full w-full object-cover'
 									src={recipe.imageSrc}
 									fill
 									placeholder='blur'

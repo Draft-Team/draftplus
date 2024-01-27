@@ -29,9 +29,9 @@ export default async function Page() {
 			</main>
 
 			<section className='container mx-auto mt-20'>
-				<div className='mb-16 flex justify-between'>
+				<div className='mb-16 flex flex-wrap items-center justify-between gap-2'>
 					<h2 className='max-w-[540px] text-3xl font-semibold'>Receitas populares</h2>
-					<p className='text-sm text-muted-foreground'>
+					<p className='max-w-xs text-sm text-muted-foreground'>
 						Os pratos mais amados e celebrados, ao alcance das suas mãos
 					</p>
 				</div>

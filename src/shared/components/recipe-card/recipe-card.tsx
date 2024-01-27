@@ -5,9 +5,7 @@ interface RecipeCardRootProps extends ComponentProps<'div'> {
 }
 export const Root = ({ children, ...rest }: RecipeCardRootProps) => {
 	return (
-		<div
-			{...rest}
-			className='max-w-sm rounded-lg border bg-white shadow-md dark:bg-[#141414]'>
+		<div {...rest} className='rounded-lg border bg-white shadow-md dark:bg-[#141414]'>
 			{children}
 		</div>
 	)

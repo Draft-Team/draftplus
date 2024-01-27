@@ -13,10 +13,13 @@ interface RecipesResponse {
 	recipes: Recipe[]
 }
 
-const recipes = [
+const imageSrc =
+	'https://images-ext-1.discordapp.net/external/0XdJTMM8E7GkzngLoQQvJ2H6SudaLNWedCelVD4Fqts/https/anamariabraga.globo.com/wp-content/uploads/2020/08/pizza-margherita-1024x576.jpg?format=webp'
+
+const recipes: RecipesResponse['recipes'] = [
 	{
 		id: 1,
-		imageSrc: '/chef.jpg',
+		imageSrc,
 		title: 'Pizza Hawaiana',
 		description:
 			'Uma mistura deliciosa de fatias de presunto suculento e pedaços de abacaxi fresco, tudo isso coberto por queijo derretido, servido sobre uma base de massa crocante.',
@@ -25,7 +28,7 @@ const recipes = [
 	},
 	{
 		id: 2,
-		imageSrc: '/chef.jpg',
+		imageSrc,
 		title: 'Pizza Margherita',
 		description:
 			'Uma pizza clássica italiana com molho de tomate, queijo mozzarella fresco e manjericão. Simples, mas deliciosa!',
@@ -34,7 +37,7 @@ const recipes = [
 	},
 	{
 		id: 3,
-		imageSrc: '/chef.jpg',
+		imageSrc,
 		title: 'Calzone de Frango',
 		description:
 			'Um calzone recheado com frango grelhado, queijo, cogumelos e molho marinara. Uma opção saborosa e diferente!',
