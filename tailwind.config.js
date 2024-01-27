@@ -18,6 +18,7 @@ module.exports = {
 				sans: ['var(--font-lexend)', ...fontFamily.sans]
 			},
 			colors: {
+				cinza: '#A1A1AA',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

@@ -1,5 +1,6 @@
 import { UtensilsCrossed } from 'lucide-react'
 
+import { PopuparRecipes } from '@/features/popular-recipes/components'
 import { placeholderBlurhash } from '@/libs/utils'
 import { BlurImage } from '@/shared/components/blur-image'
 import { Badge } from '@/shared/ui/badge'
@@ -26,6 +27,16 @@ export default async function Page() {
 					</div>
 				</section>
 			</main>
+
+			<section className='container mx-auto mt-20'>
+				<div className='mb-16 flex justify-between'>
+					<h2 className='max-w-[540px] text-3xl font-semibold'>Receitas populares</h2>
+					<p className='text-sm text-muted-foreground'>
+						Os pratos mais amados e celebrados, ao alcance das suas mãos
+					</p>
+				</div>
+				<PopuparRecipes />
+			</section>
 
 			<section className='container mx-auto mt-20'>
 				<h2 className='text-3xl font-semibold'>Descubra, Crie e Compartilhe</h2>
