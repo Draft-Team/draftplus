@@ -42,7 +42,7 @@ export default async function Page() {
 				<Button
 					asChild
 					className='ml-auto mt-4 flex w-full items-center justify-center md:w-min'>
-					<Link href={'/'}>Veja mais...</Link>
+					<Link href={'/receitas'}>Veja mais...</Link>
 				</Button>
 			</section>
 

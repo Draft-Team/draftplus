@@ -5,10 +5,10 @@ import { placeholderBlurhash } from '@/libs/utils'
 import { BlurImage } from '@/shared/components/blur-image'
 import * as RecipeCard from '@/shared/components/recipe-card'
 
-import { getRecipes } from '../actions'
+import { getPopularRecipes } from '../actions'
 
 export const PopuparRecipes = async () => {
-	const recipes = await getRecipes()
+	const recipes = await getPopularRecipes()
 
 	return (
 		<div className='grid grid-cols-1 place-items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7'>

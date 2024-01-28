@@ -80,14 +80,17 @@ const recipes: RecipesResponse['recipes'] = [
 	}
 ]
 
-export const recipesResolver: ResponseResolver = async () => {
-	const allRecipes: RecipesResponse = {
-		recipes: recipes
+export const popularRecipesResolver: ResponseResolver = async () => {
+	const sortedRecipes = recipes.slice().sort((a, b) => b.favoriteCount - a.favoriteCount)
+	const top3Recipes = sortedRecipes.slice(0, 3)
+
+	const top3RecipesResponse: RecipesResponse = {
+		recipes: top3Recipes
 	}
 
-	if (!allRecipes) {
+	if (!top3RecipesResponse) {
 		return new HttpResponse(null, { status: 401 })
 	}
 
-	return HttpResponse.json(allRecipes)
+	return HttpResponse.json(top3RecipesResponse)
 }
