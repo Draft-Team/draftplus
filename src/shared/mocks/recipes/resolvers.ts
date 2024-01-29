@@ -1,16 +1,16 @@
 import { HttpResponse, ResponseResolver } from 'msw'
 
-interface Recipe {
+export interface Recipe {
 	id: number
 	imageSrc: string
 	title: string
 	description: string
-	cookTime: string
-	servingSize: string
-	favoriteCount: number
+	cookTime: number
+	servingSize: number
+	favoriteCount?: number
 }
 
-interface RecipesResponse {
+export interface RecipesResponse {
 	recipes: Recipe[]
 }
 
@@ -24,8 +24,8 @@ const recipes: RecipesResponse['recipes'] = [
 		title: 'Pizza Hawaiana',
 		description:
 			'Uma mistura deliciosa de fatias de presunto suculento e pedaços de abacaxi fresco, tudo isso coberto por queijo derretido, servido sobre uma base de massa crocante.',
-		cookTime: '25 Mins',
-		servingSize: '2 Pessoas',
+		cookTime: 50,
+		servingSize: 5,
 		favoriteCount: 10
 	},
 	{
@@ -34,8 +34,8 @@ const recipes: RecipesResponse['recipes'] = [
 		title: 'Pizza Margherita',
 		description:
 			'Uma pizza clássica italiana com molho de tomate, queijo mozzarella fresco e manjericão. Simples, mas deliciosa!',
-		cookTime: '30 Mins',
-		servingSize: '3 Pessoas',
+		cookTime: 300,
+		servingSize: 6,
 		favoriteCount: 15
 	},
 	{
@@ -44,8 +44,8 @@ const recipes: RecipesResponse['recipes'] = [
 		title: 'Calzone de Frango',
 		description:
 			'Um calzone recheado com frango grelhado, queijo, cogumelos e molho marinara. Uma opção saborosa e diferente!',
-		cookTime: '35 Mins',
-		servingSize: '4 Pessoas',
+		cookTime: 33,
+		servingSize: 14,
 		favoriteCount: 5
 	},
 	{
@@ -54,8 +54,8 @@ const recipes: RecipesResponse['recipes'] = [
 		title: 'Spaghetti Carbonara',
 		description:
 			'Um prato clássico italiano de espaguete com um molho cremoso de ovos, queijo parmesão, pancetta e pimenta preta.',
-		cookTime: '20 Mins',
-		servingSize: '2 Pessoas',
+		cookTime: 45,
+		servingSize: 1,
 		favoriteCount: 8
 	},
 	{
@@ -64,8 +64,8 @@ const recipes: RecipesResponse['recipes'] = [
 		title: 'Tacos de Carne Asada',
 		description:
 			'Tacos recheados com carne asada grelhada, cebola, coentro e molho de pimenta. Uma explosão de sabores mexicanos!',
-		cookTime: '25 Mins',
-		servingSize: '4 Pessoas',
+		cookTime: 120,
+		servingSize: 12,
 		favoriteCount: 12
 	},
 	{
@@ -74,8 +74,8 @@ const recipes: RecipesResponse['recipes'] = [
 		title: 'Salada Caprese',
 		description:
 			'Uma salada refrescante com tomate, mussarela de búfala, manjericão fresco, azeite e vinagre balsâmico.',
-		cookTime: '15 Mins',
-		servingSize: '2 Pessoas',
+		cookTime: 90,
+		servingSize: 22,
 		favoriteCount: 7
 	}
 ]
