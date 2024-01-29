@@ -29,8 +29,13 @@ import { useFilterForm } from '../hooks/use-filter-form'
 
 export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 	const [isOpen, setIsOpen] = React.useState(false)
-	const { errors, handleSubmit, register } = useFilterForm()
+	const { errors, handleSubmit, register, reset } = useFilterForm()
 	const [filteredRecipes, setFilteredRecipes] = React.useState(recipes)
+
+	const handleClearFilters = () => {
+		reset()
+		setFilteredRecipes(recipes)
+	}
 
 	const onSubmit = async ({ name, prepTime, serves }: FilterFormData) => {
 		if (name || serves || prepTime) {
@@ -111,8 +116,9 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 								<span className='text-red-500'>{errors.prepTime.message}</span>
 							)}
 						</FormGroup>
-						<div>
+						<div className='flex gap-2'>
 							<FormButton>Filtrar</FormButton>
+							<Button onClick={() => handleClearFilters()}>Limpar Filtros</Button>
 						</div>
 					</Form>
 				</CollapsibleContent>

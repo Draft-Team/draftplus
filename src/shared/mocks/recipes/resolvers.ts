@@ -7,7 +7,7 @@ export interface Recipe {
 	description: string
 	cookTime: number
 	servingSize: number
-	favoriteCount?: number
+	favoriteCount: number
 }
 
 export interface RecipesResponse {
