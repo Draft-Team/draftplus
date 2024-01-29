@@ -9,8 +9,9 @@ interface Recipe {
 	imageSrc: string
 	title: string
 	description: string
-	cookTime: string
-	servingSize: string
+	cookTime: number
+	servingSize: number
+	favoriteCount: number
 }
 
 interface RecipesResponse {
