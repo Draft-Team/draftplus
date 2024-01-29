@@ -118,7 +118,9 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 						</FormGroup>
 						<div className='flex gap-2'>
 							<FormButton>Filtrar</FormButton>
-							<Button onClick={() => handleClearFilters()}>Limpar Filtros</Button>
+							<Button type='button' onClick={() => handleClearFilters()}>
+								Limpar Filtros
+							</Button>
 						</div>
 					</Form>
 				</CollapsibleContent>
