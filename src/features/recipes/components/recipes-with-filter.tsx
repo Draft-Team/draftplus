@@ -160,11 +160,13 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 							<RecipeCard.Footer>
 								<div className='flex gap-1'>
 									<Clock3 className='text-primary' />
-									<span className='text-cinza/80'>{recipe.cookTime} Mins</span>
+									<span className='dark:text-cinza/80'>{recipe.cookTime} Mins</span>
 								</div>
 								<div className='flex gap-1'>
 									<UserRound className='text-[#564FFD]' />
-									<span className='text-cinza/80'>{recipe.servingSize} Pessoas</span>
+									<span className=' dark:text-cinza/80'>
+										{recipe.servingSize} Pessoas
+									</span>
 								</div>
 							</RecipeCard.Footer>
 						</RecipeCard.Root>
