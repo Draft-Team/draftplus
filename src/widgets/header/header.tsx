@@ -23,8 +23,8 @@ const dataNav = [
 	},
 	{
 		id: 3,
-		title: 'Receita',
-		href: '/receita'
+		title: 'Receitas',
+		href: '/receitas'
 	},
 	{
 		id: 4,
@@ -39,6 +39,7 @@ export const Header = () => {
 	if (pathname === '/login' || pathname === '/register') {
 		return null
 	}
+
 	return (
 		<header className='container mx-auto'>
 			<div className='flex items-center justify-between pb-20 pt-11'>
