@@ -2,9 +2,16 @@
 
 import React from 'react'
 
-import { PersonIcon } from '@radix-ui/react-icons'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Clock3, ListFilter, LucideHeart, UserRound } from 'lucide-react'
+import {
+	AlarmClockCheck,
+	Clock3,
+	ListFilter,
+	LucideHeart,
+	Soup,
+	UserRound,
+	Users
+} from 'lucide-react'
 import { toast } from 'sonner'
 
 import { placeholderBlurhash } from '@/libs/utils'
@@ -78,7 +85,7 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 							initial={{ opacity: 0, height: 0 }}
 							animate={{ opacity: 1, height: 'auto' }}
 							exit={{ opacity: 0, height: 0 }}
-							transition={{ duration: 0.3, ease: 'linear' }}>
+							transition={{ duration: 0.15, ease: 'linear' }}>
 							<CollapsibleContent>
 								<Form
 									className='mt-4 flex items-end gap-4 placeholder:justify-between'
@@ -89,7 +96,7 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 											type='text'
 											id='name'
 											placeholder='Nome'
-											icon={<PersonIcon />}
+											icon={<Soup />}
 											{...register('name')}
 										/>
 										{errors.name && (
@@ -99,10 +106,9 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 									<FormGroup className='flex w-full flex-col gap-3'>
 										<FormLabel htmlFor='server'>Serve quantos ?</FormLabel>
 										<FormInputIcon
-											type='number'
 											id='server'
 											placeholder='3'
-											icon={<PersonIcon />}
+											icon={<Users />}
 											{...register('serves', {
 												setValueAs: (v) => (v === '' ? undefined : parseInt(v, 10))
 											})}
@@ -114,10 +120,9 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 									<FormGroup className='flex w-full flex-col gap-3'>
 										<FormLabel htmlFor='preptime'>Tempo de preparo</FormLabel>
 										<FormInputIcon
-											type='number'
 											id='preptime'
 											placeholder='Em minutos'
-											icon={<PersonIcon />}
+											icon={<AlarmClockCheck />}
 											{...register('prepTime', {
 												setValueAs: (v) => (v === '' ? undefined : parseInt(v, 10))
 											})}
