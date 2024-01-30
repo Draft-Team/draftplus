@@ -73,7 +73,7 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 				</div>
 				<CollapsibleContent>
 					<Form
-						className='mt-4 flex  justify-between gap-4'
+						className='mt-4 flex items-end gap-4 placeholder:justify-between'
 						onSubmit={handleSubmit(onSubmit)}>
 						<FormGroup className='flex w-full flex-col gap-3'>
 							<FormLabel htmlFor='name'>Nome</FormLabel>
@@ -118,9 +118,7 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 						</FormGroup>
 						<div className='flex gap-2'>
 							<FormButton>Filtrar</FormButton>
-							<Button type='button' onClick={() => handleClearFilters()}>
-								Limpar Filtros
-							</Button>
+							<Button onClick={() => handleClearFilters()}>Limpar Filtros</Button>
 						</div>
 					</Form>
 				</CollapsibleContent>
