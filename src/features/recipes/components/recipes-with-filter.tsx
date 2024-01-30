@@ -88,7 +88,7 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 							transition={{ duration: 0.15, ease: 'linear' }}>
 							<CollapsibleContent>
 								<Form
-									className='mt-4 flex items-end gap-4 placeholder:justify-between'
+									className='mt-4 flex flex-col  items-end gap-4 placeholder:justify-between md:flex-row'
 									onSubmit={handleSubmit(onSubmit)}>
 									<FormGroup className='flex w-full flex-col gap-3'>
 										<FormLabel htmlFor='name'>Nome</FormLabel>
