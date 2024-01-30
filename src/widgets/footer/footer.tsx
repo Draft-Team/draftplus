@@ -67,7 +67,7 @@ export const Footer = () => {
 							{section.items.map((item) => (
 								<Link
 									key={item.title}
-									className='text-muted-foreground hover:text-white/70'
+									className='text-muted-foreground hover:text-black dark:hover:text-white/70'
 									href={item.url}>
 									{item.title}
 								</Link>
