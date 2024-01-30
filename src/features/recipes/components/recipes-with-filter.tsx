@@ -118,7 +118,9 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 						</FormGroup>
 						<div className='flex gap-2'>
 							<FormButton>Filtrar</FormButton>
-							<Button onClick={() => handleClearFilters()}>Limpar Filtros</Button>
+							<Button type='button' onClick={() => handleClearFilters()}>
+								Limpar Filtros
+							</Button>
 						</div>
 					</Form>
 				</CollapsibleContent>
@@ -158,11 +160,11 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 							<RecipeCard.Footer>
 								<div className='flex gap-1'>
 									<Clock3 className='text-primary' />
-									<span className='text-cinza/80'>{recipe.cookTime}</span>
+									<span className='text-cinza/80'>{recipe.cookTime} Mins</span>
 								</div>
 								<div className='flex gap-1'>
 									<UserRound className='text-[#564FFD]' />
-									<span className='text-cinza/80'>{recipe.servingSize}</span>
+									<span className='text-cinza/80'>{recipe.servingSize} Pessoas</span>
 								</div>
 							</RecipeCard.Footer>
 						</RecipeCard.Root>
