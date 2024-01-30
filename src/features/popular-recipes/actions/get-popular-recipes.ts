@@ -17,12 +17,12 @@ interface RecipesResponse {
 	recipes: Recipe[]
 }
 
-export const getRecipes = createAction(async () => {
+export const getPopularRecipes = createAction(async () => {
 	try {
 		const http = createHttpClient()
 
 		const response = await http.get<RecipesResponse>({
-			url: '/recipes'
+			url: '/popular-recipes'
 		})
 
 		if (isLeft(response)) {
