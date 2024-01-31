@@ -126,7 +126,6 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 										<FormInputIcon
 											id='preptime'
 											placeholder='Em minutos'
-											className='no-spin'
 											type='number'
 											icon={<AlarmClockCheck />}
 											{...register('prepTime', {
