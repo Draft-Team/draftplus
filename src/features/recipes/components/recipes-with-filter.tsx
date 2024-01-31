@@ -33,12 +33,15 @@ import {
 } from '@/shared/ui/collapsible'
 
 import { FilterFormData } from '../dtos'
+import useDisableInputScroll from '../hooks/use-disable-input-scroll'
 import { useFilterForm } from '../hooks/use-filter-form'
 
 export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 	const [isOpen, setIsOpen] = React.useState(false)
 	const { errors, handleSubmit, register, reset } = useFilterForm()
 	const [filteredRecipes, setFilteredRecipes] = React.useState(recipes)
+
+	useDisableInputScroll(['server', 'preptime'])
 
 	const handleClearFilters = () => {
 		reset()
@@ -108,6 +111,7 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 										<FormInputIcon
 											id='server'
 											placeholder='3'
+											type='number'
 											icon={<Users />}
 											{...register('serves', {
 												setValueAs: (v) => (v === '' ? undefined : parseInt(v, 10))
@@ -122,6 +126,8 @@ export const RecipesWithFilter = ({ recipes }: RecipesResponse) => {
 										<FormInputIcon
 											id='preptime'
 											placeholder='Em minutos'
+											className='no-spin'
+											type='number'
 											icon={<AlarmClockCheck />}
 											{...register('prepTime', {
 												setValueAs: (v) => (v === '' ? undefined : parseInt(v, 10))
