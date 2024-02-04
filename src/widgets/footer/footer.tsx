@@ -12,7 +12,7 @@ import { Button } from '@/shared/ui/button'
 export const Footer = () => {
 	const pathname = usePathname()
 
-	if (pathname === '/login' || pathname === '/register') {
+	if (pathname === '/login' || pathname === '/register' || pathname === '/dashboard') {
 		return null
 	}
 
