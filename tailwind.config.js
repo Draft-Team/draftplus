@@ -17,6 +17,10 @@ module.exports = {
 			fontFamily: {
 				sans: ['var(--font-lexend)', ...fontFamily.sans]
 			},
+			gridTemplateColumns: {
+				dashboard: 'minmax(18rem, 20rem) 1fr',
+				profile: 'max-content 1fr min-content'
+			},
 			colors: {
 				cinza: '#A1A1AA',
 				border: 'hsl(var(--border))',

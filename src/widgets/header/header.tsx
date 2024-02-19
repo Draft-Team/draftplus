@@ -36,7 +36,11 @@ const dataNav = [
 export const Header = () => {
 	const pathname = usePathname()
 
-	if (pathname === '/login' || pathname === '/register') {
+	if (
+		pathname === '/login' ||
+		pathname === '/register' ||
+		pathname.startsWith('/dashboard')
+	) {
 		return null
 	}
 
